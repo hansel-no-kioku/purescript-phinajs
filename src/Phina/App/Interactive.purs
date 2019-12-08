@@ -105,7 +105,7 @@ setInteractive
   ⇒ Boolean
   → a
   → Effect a
-setInteractive = setProp (SProxy ∷ SProxy "interactive")
+setInteractive = setProp (SProxy ∷ _ "interactive")
 
 getInteractive
    ∷ ∀ a
@@ -113,4 +113,4 @@ getInteractive
   ⇒ ReadableProp a "interactive" Boolean
   ⇒ a
   → Effect Boolean
-getInteractive = getProp (SProxy ∷ SProxy "interactive")
+getInteractive = getProp (SProxy ∷ _ "interactive")

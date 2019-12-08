@@ -46,10 +46,10 @@ setUpdater ∷ ∀ a b. IsElement a ⇒ (GameApp → a → Effect b) → a → E
 setUpdater = runEffectFn2 _setUpdater
 
 wakeUp ∷ ∀ a. WritableProp a "awake" Boolean ⇒ a → Effect a
-wakeUp = setProp (SProxy ∷ SProxy "awake") true
+wakeUp = setProp (SProxy ∷ _ "awake") true
 
 sleep ∷ ∀ a. WritableProp a "awake" Boolean ⇒ a → Effect a
-sleep = setProp (SProxy ∷ SProxy "awake") false
+sleep = setProp (SProxy ∷ _ "awake") false
 
 foreign import _remove ∷ ∀ a. EffectFn1 a a
 

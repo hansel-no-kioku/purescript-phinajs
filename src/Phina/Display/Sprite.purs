@@ -62,10 +62,10 @@ newSpriteWithShape ∷ ∀ a. IsShape a ⇒ a → Effect Sprite
 newSpriteWithShape = runEffectFn1 _newSpriteWithShape
 
 setFrameIndex ∷ Int → Sprite → Effect Sprite
-setFrameIndex = setProp (SProxy ∷ SProxy "frameIndex")
+setFrameIndex = setProp (SProxy ∷ _ "frameIndex")
 
 getFrameIndex ∷ Sprite → Effect Int
-getFrameIndex = getProp (SProxy ∷ SProxy "frameIndex")
+getFrameIndex = getProp (SProxy ∷ _ "frameIndex")
 
 setAnimation ∷ SpriteSheetAsset → Sprite → Effect Sprite
 setAnimation = runEffectFn2 _setAnimation

@@ -91,7 +91,7 @@ popup
   → Record a
   → Async s (Record r)
 popup h = makeAsync' <<< runFn3 _popup
-      { baseClass: className $ Proxy ∷ Proxy p
+      { baseClass: className $ (Proxy ∷ _ p)
       , setup: unsafeCoerce h ∷ SetupScene p a r
       }
 

@@ -26,22 +26,22 @@ setupScene ∷ SetupScene DisplayScene () ()
 setupScene _ exit = build do
   setPropsB {backgroundColor: color "#ccb"}
   traverse_ (\a → addMovingShape {y: fst a} $ snd a)
-  	[ Tuple 40.0 easeLinear
-  	, Tuple 80.0 easeSwing
-  	, Tuple 120.0 easeInQuad
-  	, Tuple 160.0 easeOutQuad
-  	, Tuple 200.0 easeInOutQuad
-  	, Tuple 240.0 easeInCubic
-  	, Tuple 280.0 easeOutCubic
-  	, Tuple 320.0 easeInOutCubic
+    [ Tuple 40.0 easeLinear
+    , Tuple 80.0 easeSwing
+    , Tuple 120.0 easeInQuad
+    , Tuple 160.0 easeOutQuad
+    , Tuple 200.0 easeInOutQuad
+    , Tuple 240.0 easeInCubic
+    , Tuple 280.0 easeOutCubic
+    , Tuple 320.0 easeInOutCubic
   -- :
-  	, Tuple 360.0 easeOutBack
-  	, Tuple 400.0 easeInOutBack
-  	, Tuple 440.0 easeOutInBack
-  	, Tuple 480.0 easeInBounce
-  	, Tuple 520.0 easeOutBounce
-  	, Tuple 560.0 easeInOutBounce
-  	, Tuple 600.0 easeOutInBounce
+    , Tuple 360.0 easeOutBack
+    , Tuple 400.0 easeInOutBack
+    , Tuple 440.0 easeOutInBack
+    , Tuple 480.0 easeInBounce
+    , Tuple 520.0 easeOutBounce
+    , Tuple 560.0 easeInOutBounce
+    , Tuple 600.0 easeOutInBounce
     ]
   onPointStartB (\_ → exit {})
   animateB $ (wait $ sec 10) *> (call $ exit {})

@@ -36,7 +36,6 @@ import Effect (Effect)
 import Effect.Uncurried (EffectFn1, EffectFn2, EffectFn3, EffectFn4, EffectFn5, runEffectFn1, runEffectFn2, runEffectFn3, runEffectFn4, runEffectFn5)
 import Unsafe.Coerce (unsafeCoerce)
 
-import Phina.Accessory.Tweener (class Tweenable)
 import Phina.App.Element (class IsElement)
 import Phina.Types.Angle (Angle)
 import Phina.Types.Builder (Builder)

@@ -44,7 +44,7 @@ addStarShape
 addStarShape props yaw =
   addChildB' $ make (newStarShape props) $ setUpdaterB updater
   where
-    updater _ = modifyProp (SProxy ∷ SProxy "rotation") (_ + yaw)
+    updater _ = modifyProp (SProxy ∷ _ "rotation") (_ + yaw)
 
 
 addHeartShape
@@ -76,4 +76,4 @@ addHeartUpdater yaw ref _ s = do
   _ ← setPosition (pos + velocity) s
   setProp rotation (rot - yaw) s
   where
-    rotation = SProxy ∷ SProxy "rotation"
+    rotation = SProxy ∷ _ "rotation"

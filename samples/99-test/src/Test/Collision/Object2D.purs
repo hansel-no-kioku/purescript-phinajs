@@ -28,7 +28,7 @@ instance labeledScene
 
 setupScene ∷ SetupScene DisplayScene () ()
 setupScene _ exit = build do
-  setPropB (SProxy ∷ SProxy "backgroundColor") $ color "#69b"
+  setPropB (SProxy ∷ _ "backgroundColor") $ color "#69b"
 
   shapes ← liftEffect newShapes
   liftEffect $ traverse_ setupShape shapes
@@ -124,7 +124,7 @@ newPointShape scene = do
 
 
 setAlpha ∷ Number → DisplayElement → Effect DisplayElement
-setAlpha = setProp (SProxy ∷ SProxy "alpha")
+setAlpha = setProp (SProxy ∷ _ "alpha")
 
 
 setupShape ∷ DisplayElement → Effect DisplayElement
@@ -132,7 +132,7 @@ setupShape = build do
   let frameColor = color "#333"
       frameWidth = 1.0
   size ← getSizeB
-  rotation ← getPropB (SProxy ∷ SProxy "rotation")
+  rotation ← getPropB (SProxy ∷ _ "rotation")
   addChildB' $ newRectangleShape
                 { width: size.width
                 , height: size.height
@@ -141,9 +141,9 @@ setupShape = build do
                 , stroke: frameColor
                 , strokeWidth: frameWidth
                 }
-  bounding ← getPropB (SProxy ∷ SProxy "boundingType")
+  bounding ← getPropB (SProxy ∷ _ "boundingType")
   when (bounding == boundingCircle) do
-    radius ← getPropB (SProxy ∷ SProxy "radius")
+    radius ← getPropB (SProxy ∷ _ "radius")
     addChildB' $ newCircleShape
                   { radius: radius
                   , fill: nullColor

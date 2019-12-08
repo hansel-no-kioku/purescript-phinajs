@@ -118,10 +118,10 @@ sceneEntry
   → Proxy nh
   → SceneEntry
 sceneEntry _ _ = unsafeCoerce
-  { baseClass: className $ Proxy ∷ Proxy s
-  , label: reflectSymbol $ SProxy ∷ SProxy l
-  , nextLabel: reflectSymbol $ SProxy ∷ SProxy nl
-  , setup: unsafeCoerce (sceneHandle $ Proxy ∷ Proxy h) ∷ SetupScene s a na
+  { baseClass: className (Proxy ∷ _ s)
+  , label: reflectSymbol (SProxy ∷ _ l)
+  , nextLabel: reflectSymbol (SProxy ∷ _ nl)
+  , setup: unsafeCoerce (sceneHandle (Proxy ∷ Proxy h)) ∷ SetupScene s a na
   }
 
 foreign import data SceneTrans ∷ Type

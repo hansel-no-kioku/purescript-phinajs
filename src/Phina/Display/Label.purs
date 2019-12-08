@@ -60,7 +60,7 @@ newLabel' ∷ Params Label → Effect Label
 newLabel' = newShape'
 
 setText ∷ String → Label → Effect Label
-setText = setProp (SProxy ∷ SProxy "text")
+setText = setProp (SProxy ∷ _ "text")
 
 getText ∷ Label → Effect String
-getText = getProp (SProxy ∷ SProxy "text")
+getText = getProp (SProxy ∷ _ "text")

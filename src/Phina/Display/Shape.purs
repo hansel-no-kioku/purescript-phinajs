@@ -54,5 +54,5 @@ newShape' = unsafeNewShape
 
 unsafeNewShape ∷ ∀ a b. IsShape a ⇒ b → Effect a
 unsafeNewShape params = do
-  shape ← unsafeNew "display" (shape (Proxy ∷ Proxy a)) {}
+  shape ← unsafeNew "display" (shape (Proxy ∷ _ a)) {}
   unsafeSetProps params shape

@@ -29,7 +29,7 @@ import Effect (Effect)
 import Effect.Uncurried (EffectFn3, runEffectFn3)
 import Prim.Row (class Cons) as R
 import Type.Prelude (class IsSymbol, class RowToList, SProxy, reflectSymbol)
-import Type.Row (class ListToRow, Cons, Nil, kind RowList)
+import Type.RowList (class ListToRow, Cons, Nil, kind RowList)
 import Unsafe.Coerce (unsafeCoerce)
 
 import Phina.Types.Row (class SubRow)

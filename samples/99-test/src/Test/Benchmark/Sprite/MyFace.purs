@@ -21,7 +21,7 @@ newMyFace areaSize props = do
 
 updateMyFace ∷ Size → Ref Vector2 → GameApp → Sprite → Effect Unit
 updateMyFace areaSize ref gameApp face = do
-  deltaTime ← getProp (SProxy ∷ SProxy "deltaTime") gameApp
+  deltaTime ← getProp (SProxy ∷ _ "deltaTime") gameApp
   position ← getPosition face
   velocity ← read ref
   let newPosition = getNewPosition deltaTime velocity position

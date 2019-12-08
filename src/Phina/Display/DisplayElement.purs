@@ -49,7 +49,7 @@ boundingNone ∷ BoundingType
 boundingNone = unsafeCoerce "none"
 
 instance eqBoundingType ∷ Eq BoundingType where
-  eq = eq `on` unsafeCoerce ∷ BoundingType → String
+  eq = eq `on` (unsafeCoerce ∷ BoundingType → String)
 
 --
 

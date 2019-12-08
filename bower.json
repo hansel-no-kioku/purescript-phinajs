@@ -26,23 +26,23 @@
     "package*.json"
   ],
   "dependencies": {
-    "purescript-prelude": "^4.0.1",
-    "purescript-effect": "^2.0.0",
+    "purescript-prelude": "^4.1.1",
+    "purescript-effect": "^2.0.1",
     "purescript-unsafe-coerce": "^4.0.0",
-    "purescript-typelevel-prelude": "^3.0.0",
+    "purescript-typelevel-prelude": "^5.0.1",
     "purescript-functions": "^4.0.0",
-    "purescript-foldable-traversable": "^4.0.0",
-    "purescript-maybe": "^4.0.0",
+    "purescript-foldable-traversable": "^4.1.1",
+    "purescript-maybe": "^4.0.1",
     "purescript-newtype": "^3.0.0",
-    "purescript-tuples": "^5.0.0",
+    "purescript-tuples": "^5.1.0",
     "purescript-transformers": "^4.1.0",
     "purescript-nullable": "^4.0.0",
-    "purescript-aff": "^5.0.0",
+    "purescript-aff": "^5.1.2",
     "purescript-exceptions": "^4.0.0",
-    "purescript-arrays": "^5.0.0"
+    "purescript-arrays": "^5.3.1"
   },
   "devDependencies": {
-    "purescript-console": "^4.1.0",
+    "purescript-console": "^4.3.0",
     "purescript-psci-support": "^4.0.0"
   },
   "private": false

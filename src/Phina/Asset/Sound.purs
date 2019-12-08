@@ -9,8 +9,6 @@ module Phina.Asset.Sound
   , getLoopSound
   ) where
 
-import Prelude
-
 import Effect (Effect)
 import Effect.Uncurried (EffectFn1, runEffectFn1)
 import Type.Prelude (SProxy(..))
@@ -36,16 +34,16 @@ instance playableSound ∷ Playable Sound where
 type Volume = Number
 
 setVolume ∷ Volume → Sound → Effect Sound
-setVolume = setProp $ SProxy ∷ SProxy "volume"
+setVolume = setProp (SProxy ∷ _ "volume")
 
 getVolume ∷ Sound → Effect Volume
-getVolume = getProp $ SProxy ∷ SProxy "volume"
+getVolume = getProp (SProxy ∷ _ "volume")
 
 setLoopSound ∷ Boolean → Sound → Effect Sound
-setLoopSound = setProp $ SProxy ∷ SProxy "loop"
+setLoopSound = setProp (SProxy ∷ _ "loop")
 
 getLoopSound ∷ Sound → Effect Boolean
-getLoopSound = getProp $ SProxy ∷ SProxy "loop"
+getLoopSound = getProp (SProxy ∷ _ "loop")
 
 --
 

@@ -11,3 +11,4 @@ npm*
 package-lock.json
 yarn.lock
 /samples/*/js/
+.vscode
